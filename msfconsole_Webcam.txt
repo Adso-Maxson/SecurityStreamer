@@ -1,0 +1,56 @@
+Webcam_list:
+Este comando stdapi fornece uma lista de todas as webcams no sistema de destino. Cada webcam terá um número de índice.
+
+Webcam_snap:
+Este comando stdapi leva um instantâneo para a webcam especificada, pelo número 1 padrão e tentará sem precisão de argumento para abrir o instantâneo salvo.
+
+Webcam_snap pode ter argumentos:
+
+-h : para exibir o banner de ajuda.
+
+-Eu : O número de índice da webcam para usar.
+
+-p : O caminho do arquivo de imagem JPEG. Por padrão $ HOME / [randomname] .jpeg
+
+-q : A qualidade da imagem JPEG, por padrão, '50'.
+
+-v : Ver automaticamente a imagem JPEG, por padrão, "verdade".
+
+
+Record_mic
+Este comando stdapi grava áudio, por padrão, 1 segundo, do microfone padrão e tentará sem precisão de argumento para reproduzir o arquivo wav de áudio capturado.
+
+Record_mic pode ter argumentos:
+
+-h : para exibir o banner de ajuda.
+
+-d : Número de segundos para gravar, por padrão, 1 segundo (inútil).
+
+-f : O caminho do arquivo wav. Por padrão $ HOME / [randomname] .wav
+
+-p : Reproduz automaticamente o áudio capturado, por padrão, 'verdadeiro'.
+
+
+(Bg) webcam executada
+O mesmo que o comando stdapi webcam_snap, mas com intervalo de atraso de loop para atualizar o snap jpeg exibido. Um arquivo HTML atualizado, "webcam.htm", fornecerá a cada x milissegundos um novo instantâneo. Você pode invocar o script da webcam com o comando run ou bgrun meterpreter.
+
+Os possíveis argumentos para iniciar uma gravação são:
+
+-h : para exibir o banner de ajuda.
+
+-d : Intervalo de atraso de loop em milissegundos, por padrão, 1000.
+
+-f : Basta pegar um único quadro.
+
+-g : Enviar para a GUI em vez de escrever o arquivo.
+
+-Eu : O índice da webcam para usar, por padrão 1.
+
+-l : Continue a capturar em um loop, por padrão (inútil).
+
+-p : O caminho para as imagens da pasta será salvo, por padrão, o diretório de trabalho atual.
+
+-q : A qualidade JPEG, por padrão, '50'.
+
+
+Para parar a gravação da webcam, basta digitar o seguinte comando:

